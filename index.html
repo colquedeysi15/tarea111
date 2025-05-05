@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <center><h1 id="titulo">EJERCICIOS DE HEURISTICA</h1></center>
+ 
+    <h2>Enunciado del Problema:</h2>
+    <p>Si se distribuyen <span class="formula">n</span> objetos en <span class="formula">m</span> cajas y sabemos que <span class="formula">n > mr</span>, entonces por lo menos en una de las cajas habrá como mínimo <span class="formula">r + 1</span> objetos.</p>
+
+    <h3>Demostración (utilizando el Principio del Palomar por contradicción):</h3>
+    <p>Supongamos, para llegar a una contradicción, que en ninguna de las <span class="formula">m</span> cajas hay al menos <span class="formula">r + 1</span> objetos. Esto implica que el número de objetos en cada caja es a lo sumo <span class="formula">r</span>.</p>
+
+    <p>Sea <span class="formula">c<sub>i</sub></span> el número de objetos en la caja <span class="formula">i</span>, donde <span class="formula">i</span> varía desde 1 hasta <span class="formula">m</span>.</p>
+    <p>Nuestra suposición es que:</p>
+    <p class="formula">\(c_i \leq r\) para todo \(i = 1, 2, ..., m\)</p>
+
+    <p>El número total de objetos distribuidos en las <span class="formula">m</span> cajas es la suma del número de objetos en cada caja:</p>
+    <p class="formula">\(n = \sum_{i=1}^{m} c_i\)</p>
+
+    <p>Dado que <span class="formula">\(c_i \leq r\)</span> para cada caja, la suma total del número de objetos está acotada superiormente por:</p>
+    <p class="formula">\(n = \sum_{i=1}^{m} c_i \leq \sum_{i=1}^{m} r = mr\)</p>
+
+    <p>Por lo tanto, si nuestra suposición fuera cierta, tendríamos que <span class="formula">\(n \leq mr\)</span>.</p>
+
+    <p>Sin embargo, el enunciado del problema nos da la condición de que <span class="formula">\(n > mr\)</span>.</p>
+
+    <p>Esta condición contradice nuestra conclusión de que <span class="formula">\(n \leq mr\)</span>.</p>
+
+    <p>Por lo tanto, la suposición inicial de que en ninguna de las cajas hay al menos <span class="formula">\(r + 1\)</span> objetos debe ser falsa.</p>
+
+    <p class="conclusion">En consecuencia, concluimos que por lo menos en una de las cajas habrá como mínimo <span class="formula">\(r + 1\)</span> objetos.</p>
+
+    <p>Este resultado es una aplicación directa del Principio del Palomar (o Principio de Dirichlet).</p>
+
+   
+        
+        <h1>Principio del Palomar</h1>
+    <p><strong>1.</strong> Si se distribuyen <span class="math">n</span> objetos en <span class="math">m</span> cajas y sabemos que <span class="math">n > mr</span>, entonces por lo menos en una de las cajas habrá como mínimo <span class="math">r + 1</span> objetos.</p>
+
+    <h2>Demostración (por contradicción)</h2>
+    <p>Supongamos que la conclusión es falsa, es decir, que en ninguna de las <span class="math">m</span> cajas hay al menos <span class="math">r + 1</span> objetos. Esto implica que el número de objetos en cada caja es a lo sumo <span class="math">r</span>.</p>
+    <p>Sea <span class="math">x<sub>i</sub></span> el número de objetos en la caja <span class="math">i</span>, donde <span class="math">i = 1, 2, ..., m</span>. Nuestra suposición es que <span class="math">x<sub>i</sub> ≤ r</span> para todo <span class="math">i</span>.</p>
+    <p>El número total de objetos distribuidos es la suma de los objetos en cada caja:</p>
+    <p class="equation"><span class="math">n = \(\sum_{i=1}^{m} x_i\)</span></p>
+    <p>Si cada <span class="math">x<sub>i</sub> ≤ r</span>, entonces la suma total está acotada por:</p>
+    <p class="equation"><span class="math">n = \(\sum_{i=1}^{m} x_i \leq \sum_{i=1}^{m} r = mr\)</span></p>
+    <p>Esto nos lleva a la conclusión de que <span class="math">n ≤ mr</span>, lo cual contradice la condición inicial dada en el problema, <span class="math">n > mr</span>.</p>
+    <p>Por lo tanto, nuestra suposición inicial de que en ninguna caja hay al menos <span class="math">r + 1</span> objetos debe ser falsa. En consecuencia, por lo menos en una de las cajas habrá como mínimo <span class="math">r + 1</span> objetos.</p>
+
+    <script>
+        // Script para renderizar las expresiones LaTeX utilizando MathJax
+        // Asegúrate de incluir la siguiente línea en el <head> de tu documento HTML
+        // para que las expresiones matemáticas se visualicen correctamente:
+        // <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        // <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </script>   
+</body>
+</html>
